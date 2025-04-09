@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { ApiService } from './api/api.service';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { AppRoutingModule } from './app.routes';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, ApiService],
-  imports: [CommonModule, ComponentsModule],
+  imports: [CommonModule, AppRoutingModule, ComponentsModule],
 })
-export class ComponentsModule {}
+export class AppModule {}
