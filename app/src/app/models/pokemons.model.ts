@@ -18,12 +18,10 @@ export type Pokemon = {
   past_abilities: any[];
   past_types: any[];
   species: NameEUrl;
-  sprites: {
-    versions: Versions;
-    stats: Stats[];
-    types: Types[];
-    weight: number;
-  };
+  sprites:Sprites
+  stats: Stats[];
+  types: Types[];
+  weight: number;
 };
 
 type NameEUrl = {
