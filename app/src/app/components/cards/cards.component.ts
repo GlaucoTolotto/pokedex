@@ -16,9 +16,10 @@ export class CardsComponent {
   constructor(private api: ApiService) {}
 
   getPokemon() {
-    this.api.getPokemon('ditto').subscribe((res) => {
+    this.api.getPokemon('electivire').subscribe((res) => {
       if (res) {
         this.pokemon = res;
+        console.log(this.pokemon.sprites.front_default)
         this.exibir = !this.exibir;
       }
     });

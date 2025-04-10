@@ -1,4 +1,4 @@
-<main class="main">
+<!-- <main class="main">
   <div class="flex flex-col justify-center items-center p-16">
     <h1
       class="text-3xl underline text-amber-700 mt-10 hover:bg-blue-400 cursor-pointer"
@@ -6,14 +6,12 @@
       Hello world from Tailwind
     </h1>
     <div class="btn btn-primary mt-5">Hello world from DaisyUI</div>
-    <!-- {{ pokemon }} -->
+    {{ pokemon?.sprites?.front_default}}
   </div>
 </main>
 
 <button (click)="getPokemon()">teste</button>
 
 <div *ngIf="exibir && pokemon">
-  <div *ngFor="let pok of pokemon.forms">
-    <img [src]="pok.url" />
-  </div>
-</div>
+  <img [src]="pokemon.sprites.front_default" />
+</div> -->
