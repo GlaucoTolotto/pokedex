@@ -5,7 +5,7 @@ import { Pokemon } from '../models/pokemons.model';
 
 @Injectable()
 export class ApiService {
-  url = 'https://pokeapi.co/api/v2/';
+  private url = 'https://pokeapi.co/api/v2/';
 
   constructor(private httpClient: HttpClient) {}
 

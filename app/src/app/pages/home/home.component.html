@@ -1,1 +1,8 @@
-<header><img src="/pokemon_logo_PNG5.png"/></header>
+<header>
+  <img src="/pokemon_logo_PNG5.png" />
+  <div><p>Tipos</p></div>
+</header>
+<form *ngIf="form" [formGroup]="form">
+  <input formControlName="pokemonName" />
+  <button (click)="onSubimit()">Enviar</button>
+</form>
