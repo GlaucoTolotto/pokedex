@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class CardsComponent {
-  @Input() pokemon: PokemonData | undefined;
+  @Input() pokemon: any | undefined;
 }

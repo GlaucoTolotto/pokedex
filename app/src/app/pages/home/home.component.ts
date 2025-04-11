@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -9,6 +9,7 @@ import { ApiService } from '../../api/api.service';
 import { PokemonData } from '../../models/pokemons.model';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from '../../components/cards/cards.component';
+import { AllPokemon, PokemonsList } from '../../models/allPokemons.model';
 
 @Component({
   selector: 'app-home',
@@ -17,12 +18,20 @@ import { CardsComponent } from '../../components/cards/cards.component';
   imports: [CommonModule, FormsModule, ReactiveFormsModule, CardsComponent],
   providers: [ApiService],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   form: FormGroup;
-  pokemon: PokemonData | undefined;
+  pokemons: any | undefined;
 
   constructor(private formBuilder: FormBuilder, private service: ApiService) {
     this.form = this.criarForm();
+  }
+
+  ngOnInit(): void {
+    this.service.getAllPokemons().subscribe({
+      next: (data: AllPokemon) => {
+        this.pokemons = data.results;
+      },
+    });
   }
 
   criarForm(): FormGroup {
@@ -34,9 +43,9 @@ export class HomeComponent {
   }
 
   onSubimit() {
-    this.service.getPokemon(this.pokemonNameControl?.value).subscribe({
+    this.service.getPokemonByName(this.pokemonNameControl?.value).subscribe({
       next: (data: PokemonData) => {
-        this.pokemon = data
+        this.pokemons = data;
       },
       error: (error) => {
         console.log('Erro ao buscar o Pokemon', error);

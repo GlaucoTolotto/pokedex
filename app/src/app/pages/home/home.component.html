@@ -7,4 +7,6 @@
   <button (click)="onSubimit()">Enviar</button>
 </form>
 
-<app-cards [pokemon]="pokemon"></app-cards>
+<div >
+  <app-cards *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-cards>
+</div>

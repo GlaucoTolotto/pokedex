@@ -2,10 +2,10 @@ export type AllPokemon = {
   count: number;
   next: string;
   previous: any;
-  results: NameEUrl[];
+  results: PokemonsList[];
 };
 
-type NameEUrl = {
+export type PokemonsList = {
   name: string;
   url: string;
 };
