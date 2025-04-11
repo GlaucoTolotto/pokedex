@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PokemonData } from '../models/pokemons.model';
+import { AllPokemon } from '../models/allPokemons.model';
 
 @Injectable()
 export class ApiService {
@@ -9,7 +10,13 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPokemon(nomePokemon: string): Observable<PokemonData> {
-    return this.httpClient.get<PokemonData>(`${this.url}/pokemon/${nomePokemon}`);
+  getAllPokemons() {
+    return this.httpClient.get<AllPokemon>(this.url);
+  }
+
+  getPokemonByName(nomePokemon: string): Observable<PokemonData> {
+    return this.httpClient.get<PokemonData>(
+      `${this.url}/pokemon/${nomePokemon}`
+    );
   }
 }
