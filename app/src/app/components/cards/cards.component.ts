@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../api/api.service';
-import { Pokemon } from '../../models/pokemons.model';
+import { PokemonData } from '../../models/pokemons.model';
 
 @Component({
   selector: 'app-cards',
@@ -11,7 +11,7 @@ import { Pokemon } from '../../models/pokemons.model';
 })
 export class CardsComponent {
   title = 'app';
-  pokemon: Pokemon | undefined;
+  pokemon: PokemonData | undefined;
   exibir = false;
   constructor(private api: ApiService) {}
 
