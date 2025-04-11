@@ -261,6 +261,6 @@ type Stats = {
 };
 
 type Types = {
-  slot: 1;
+  slot: number;
   type: NameEUrl;
 };
