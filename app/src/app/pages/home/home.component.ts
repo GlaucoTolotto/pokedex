@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../api/api.service';
 import { PokemonData } from '../../models/pokemons.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  standalone: false,
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  providers: [ApiService]
 })
 export class HomeComponent {
   form: FormGroup;
