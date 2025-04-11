@@ -1,4 +1,4 @@
-export type Pokemon = {
+export type PokemonData = {
   abilities: Abilities[];
   base_experience: number;
   cries: {
