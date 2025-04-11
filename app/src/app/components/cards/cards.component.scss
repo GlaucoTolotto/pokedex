@@ -13,4 +13,11 @@
   img {
     width: 12em;
   }
+
+  ul{
+    display: flex;
+    li {
+        margin: 0.5em;
+    }
+  }
 }
