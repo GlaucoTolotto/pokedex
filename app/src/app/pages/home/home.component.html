@@ -7,6 +7,9 @@
   <button (click)="onSubimit()">Enviar</button>
 </form>
 
-<div >
-  <app-cards *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-cards>
+<div *ngFor="let pokemon of pokemons2?.value()?.results">
+  <p>{{ pokemon.name }}</p>
+  <!-- @for(pokemon2 of pokemons2?.value()?.results; track pokemons2){
+  <app-cards [pokemon]="pokemon2"></app-cards>
+  } -->
 </div>
