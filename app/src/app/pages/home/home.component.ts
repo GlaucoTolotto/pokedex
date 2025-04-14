@@ -1,11 +1,8 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  effect,
   inject,
   OnInit,
-  resource,
-  ResourceRef,
 } from '@angular/core';
 import {
   FormBuilder,
@@ -14,7 +11,6 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { ApiService } from '../../api/api.service';
-import { PokemonData } from '../../models/pokemons.model';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { AllPokemon } from '../../models/allPokemons.model';
@@ -32,21 +28,11 @@ import {rxResource } from '@angular/core/rxjs-interop'
 export class HomeComponent implements OnInit {
   private httpClient = inject(HttpClient);
   form: FormGroup;
-  pokemons = resource<AllPokemon, unknown>({
-    loader: async () => {
-      const response = await fetch(
-        'https://pokeapi.co/api/v2/pokemon?limit=151'
-      );
-      const data = await response.json();
-      return data.results;
-    },
-  });
-  pokemons2 = rxResource<AllPokemon, unknown>({
+  pokemons = rxResource<AllPokemon, unknown>({
     loader: () => {
      return this.httpClient.get<AllPokemon>('https://pokeapi.co/api/v2/pokemon?limit=151')
     },
   });
-  // pokemons: AllPokemon | PokemonData | undefined;
 
   constructor(private formBuilder: FormBuilder, private service: ApiService) {
     this.form = this.criarForm();
