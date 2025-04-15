@@ -1,8 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -14,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { AllPokemon } from '../../models/allPokemons.model';
 import { rxResource } from '@angular/core/rxjs-interop';
+import { PokemonData } from '../../models/pokemons.model';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +26,7 @@ export class HomeComponent {
   pokemons = rxResource<AllPokemon, { parameters: string }>({
     request: () => ({ parameters: this.pokemonSerchWordKey() }),
     loader: ({ request }) => {
-      return this.service.getAllPokemons(request.parameters);
+      return  this.service.getAllPokemons(request.parameters);
     },
   });
 
@@ -43,12 +40,6 @@ export class HomeComponent {
 
   get pokemonNameControl() {
     return this.form.get('pokemonName');
-  }
-
-  onSubimit() {
-    console.log(this.pokemons.value());
-
-    this.pokemons.reload();
   }
 
   serchPokemonHandler(event: Event) {
