@@ -1,6 +1,9 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  resource,
+  ResourceRef,
+  signal,
 } from '@angular/core';
 import {
   FormBuilder,
@@ -24,9 +27,12 @@ import { rxResource } from '@angular/core/rxjs-interop';
 })
 export class HomeComponent {
   form: FormGroup;
-  pokemons = rxResource<AllPokemon, unknown>({
-    loader: () => {
-      return this.service.getAllPokemons();
+  // pokemons: ResourceRef<AllPokemon | undefined> | undefined
+  pokemonSerchWordKey = signal('');
+  pokemons = rxResource<AllPokemon, { parameters: string }>({
+    request: () => ({ parameters: this.pokemonSerchWordKey() }),
+    loader: ({ request }) => {
+      return this.service.getAllPokemons(request.parameters);
     },
   });
 
@@ -51,5 +57,13 @@ export class HomeComponent {
     //     console.log('Erro ao buscar o Pokemon', error);
     //   },
     // });
+    console.log(this.pokemons.value());
+
+    this.pokemons.reload();
+  }
+
+  serchPokemonHandler(event: Event) {
+    const searchWord = (event.target as HTMLInputElement).value;
+    this.pokemonSerchWordKey.set(searchWord);
   }
 }
