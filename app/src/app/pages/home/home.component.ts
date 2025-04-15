@@ -21,7 +21,6 @@ import { PokemonData } from '../../models/pokemons.model';
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class HomeComponent {
-  form: FormGroup;
   pokemonSerchWordKey = signal('');
   pokemons = rxResource<AllPokemon, { parameters: string }>({
     request: () => ({ parameters: this.pokemonSerchWordKey() }),
@@ -30,16 +29,7 @@ export class HomeComponent {
     },
   });
 
-  constructor(private formBuilder: FormBuilder, private service: ApiService) {
-    this.form = this.criarForm();
-  }
-
-  criarForm(): FormGroup {
-    return this.formBuilder.group({ pokemonName: [''] });
-  }
-
-  get pokemonNameControl() {
-    return this.form.get('pokemonName');
+  constructor(private service: ApiService) {
   }
 
   serchPokemonHandler(event: Event) {
