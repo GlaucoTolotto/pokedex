@@ -10,10 +10,8 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getAllPokemons(request?: string) {
-    return this.httpClient.get<AllPokemon>(
-      request ? `${this.url}/pokemon/${request}` : `${this.url}/pokemon?limit=10`
-    );
+  getAllPokemons(): Observable<AllPokemon> {
+    return this.httpClient.get<AllPokemon>(`${this.url}/pokemon?limit=20`);
   }
 
   getPokemonByName(nomePokemon: string): Observable<PokemonData> {
