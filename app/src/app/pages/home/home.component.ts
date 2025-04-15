@@ -1,8 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  inject,
-  OnInit,
 } from '@angular/core';
 import {
   FormBuilder,
@@ -14,8 +12,7 @@ import { ApiService } from '../../api/api.service';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { AllPokemon } from '../../models/allPokemons.model';
-import { HttpClient } from '@angular/common/http';
-import {rxResource } from '@angular/core/rxjs-interop'
+import { rxResource } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-home',
@@ -25,26 +22,16 @@ import {rxResource } from '@angular/core/rxjs-interop'
   providers: [ApiService],
   changeDetection: ChangeDetectionStrategy.Default,
 })
-export class HomeComponent implements OnInit {
-  private httpClient = inject(HttpClient);
+export class HomeComponent {
   form: FormGroup;
   pokemons = rxResource<AllPokemon, unknown>({
     loader: () => {
-     return this.httpClient.get<AllPokemon>('https://pokeapi.co/api/v2/pokemon?limit=151')
+      return this.service.getAllPokemons();
     },
   });
 
   constructor(private formBuilder: FormBuilder, private service: ApiService) {
     this.form = this.criarForm();
-  }
-
-  ngOnInit(): void {
-
-    // effect(() => {
-    //   if (this.rxPokemons()) {
-    //     this.pokemons = this.rxPokemons();
-    //   }
-    // });
   }
 
   criarForm(): FormGroup {
