@@ -11,7 +11,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
 
   getAllPokemons() {
-    return this.httpClient.get<AllPokemon>(this.url);
+    return this.httpClient.get<AllPokemon>(`${this.url}/pokemon?limit=20`);
   }
 
   getPokemonByName(nomePokemon: string): Observable<PokemonData> {
