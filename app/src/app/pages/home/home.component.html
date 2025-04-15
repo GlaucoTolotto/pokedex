@@ -3,12 +3,23 @@
   <div><p>Tipos</p></div>
 </header>
 <form [formGroup]="form">
-  <input formControlName="pokemonName" />
+  <input
+    [value]="pokemonSerchWordKey()"
+    (input)="serchPokemonHandler($event)"
+  />
   <button (click)="onSubimit()">Enviar</button>
 </form>
 
 <div class="box">
-  @for(pokemon2 of pokemons?.value()?.results;let i= $index; track i){
-  <app-cards [pokemon]="pokemon2"></app-cards>
+  @if(pokemons.isLoading()){
+  <p>Carregando...</p>
+  } 
+  
+  @if(pokemons.value()?.results){ 
+    @for(pokemon of pokemons.value()?.results; track pokemon.name){
+      <app-cards [pokemon]="pokemon"></app-cards>
+    } 
+  }@else {
+    <app-cards [pokemon]="pokemons.value()"></app-cards>
   }
 </div>
