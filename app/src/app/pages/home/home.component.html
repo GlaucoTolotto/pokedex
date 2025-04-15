@@ -8,7 +8,7 @@
 </form>
 
 <div class="box">
-  @for(pokemon2 of pokemons?.value()?.results; track pokemons?.value()){
+  @for(pokemon2 of pokemons?.value()?.results;let i= $index; track i){
   <app-cards [pokemon]="pokemon2"></app-cards>
   }
 </div>
