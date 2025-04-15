@@ -1,8 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  resource,
-  ResourceRef,
   signal,
 } from '@angular/core';
 import {
@@ -27,7 +25,6 @@ import { rxResource } from '@angular/core/rxjs-interop';
 })
 export class HomeComponent {
   form: FormGroup;
-  // pokemons: ResourceRef<AllPokemon | undefined> | undefined
   pokemonSerchWordKey = signal('');
   pokemons = rxResource<AllPokemon, { parameters: string }>({
     request: () => ({ parameters: this.pokemonSerchWordKey() }),
@@ -49,14 +46,6 @@ export class HomeComponent {
   }
 
   onSubimit() {
-    // this.service.getPokemonByName(this.pokemonNameControl?.value).subscribe({
-    //   next: (data: PokemonData) => {
-    //     this.pokemons = data;
-    //   },
-    //   error: (error) => {
-    //     console.log('Erro ao buscar o Pokemon', error);
-    //   },
-    // });
     console.log(this.pokemons.value());
 
     this.pokemons.reload();
