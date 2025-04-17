@@ -17,9 +17,9 @@
   
   @if(pokemons.value()?.results){ 
     @for(pokemon of pokemons.value()?.results; track pokemon.name){
-      <app-cards [pokemon]="pokemon"></app-cards>
+      <app-pokebola  [pokemon]="pokemon"></app-pokebola >
     } 
   }@else {
-    <app-cards [pokemon]="pokemons.value()"></app-cards>
+    <app-pokebola [pokemon]="pokemons.value()"></app-pokebola >
   }
 </div>
