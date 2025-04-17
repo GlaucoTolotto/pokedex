@@ -1,8 +1,0 @@
-<div *ngIf="pokemon" class="card">
-  <h2>{{ pokemon.name | uppercase }}</h2>
-  <img [src]="pokemon.sprites?.front_default" />
-  <ul>
-    <li *ngFor="let type of pokemon.types">{{ type.type.name }}</li>
-  </ul>
-  <button>+</button>
-</div>
