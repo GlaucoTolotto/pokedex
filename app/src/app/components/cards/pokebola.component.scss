@@ -7,11 +7,18 @@
   border: solid 0.4em $primary-black;
   margin: 0.5em;
   border-radius: 50%;
+  overflow: hidden;
+  width: 15em;
+  height: 15em; 
   position: relative;
   
   .cimaPokebola {
+    width: 100%;
+    height: 100%;
     background-color: $primary-red;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     h2 {
       font-family: "VT323", monospace;
       font-weight: 400;
@@ -19,20 +26,28 @@
       font-size: 2.5em;
     }
   }
-
-
+  
   button {
     background-color: $primary-white;
     font-size: 1em;
     color: $primary-red;
     border-radius: 50%;
     border: solid 0.4em $primary-black;
-    padding: 1em 2em 1em 2em;
+    // padding: 1em 2em 1em 2em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:  4.5em;
+    height: 4.5em;
   }
-
+  
   .baixoPokebola {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     background-color: $primary-white;
+    border-top: solid 0.4em $primary-black;
   }
 }
+
+
