@@ -1,8 +1,4 @@
 @import "../../utilities/styles/variables.scss";
-$color: #ffe9e9;
-$color-dark: darken($color, 10%);
-$color-border: rgba(darken($color, 60%), .45);
-$color-text: darken($color, 85%);
 
 .pokebola {
   display: flex;
@@ -30,12 +26,14 @@ $color-text: darken($color, 85%);
       font-size: 2.5em;
     }
   }
+
+
   button {
     background-color: $primary-white;
     font-size: 1em;
     color: $primary-red;
     border-radius: 50%;
-    border: solid 0.4em $primary-black;
+    // border: solid 0.4em $primary-black;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -43,19 +41,30 @@ $color-text: darken($color, 85%);
     width:  4.5em;
     height: 4.5em;
     cursor: pointer;
-    box-shadow: 0 3px $primary-white;
+    // box-shadow: 0 0.2rem $primary-white, 0 0 0.2rem 0.1rem rgb(153, 153, 153);
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), /* Sombra padrão */
+    //           0 0 0 3px blue;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 
     &:active {
-      background-color: #3e8e41;
-      box-shadow: 0 0 #666;
-      transform: translate(-2.3rem, -2.2rem);
+      background-color: $primary-white;
+      box-shadow: 0 0.2rem #666,
+                  0 0 0 3px rgb(153, 153, 153);
+      transform: translate(-2.3rem, -2rem);
     }
+  }
+
+  .sombraBotao{
+    border-radius: 50%;
+    width:  4.5em;
+    height: 4.5em;
+    background-color: $primary-black;
   }
   
   .baixoPokebola {
     width: 100%;
     height: 100%;
-    background-color: $primary-red;
+    background-color: $primary-white;
     border-top: solid 0.4em $primary-black;
   }
 }
