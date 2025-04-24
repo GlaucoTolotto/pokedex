@@ -5,12 +5,13 @@ import { CommonModule } from '@angular/common';
 import { PokebolaComponent } from '../../components/cards/pokebola.component';
 import { AllPokemon } from '../../models/allPokemons.model';
 import { rxResource } from '@angular/core/rxjs-interop';
+import { Pokebola8BitsComponent } from '../../components/pokebola8-bits/pokebola8-bits.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, PokebolaComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, PokebolaComponent,Pokebola8BitsComponent],
   providers: [ApiService],
   changeDetection: ChangeDetectionStrategy.Default,
 })
