@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pokebola8-bits',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pokebola8-bits.component.html',
   styleUrl: './pokebola8-bits.component.scss'
 })
