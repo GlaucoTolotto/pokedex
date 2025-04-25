@@ -3,6 +3,12 @@
 .pokebola {
   width: 17rem;
   height: 17rem;
+  margin: 1rem;
+
+  &:hover{
+      transform: translateY(-1.5rem);
+  }
+
   .pixel {
     width: $size;
     height: $size;
