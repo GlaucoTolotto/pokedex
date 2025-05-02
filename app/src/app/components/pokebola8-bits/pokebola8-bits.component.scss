@@ -302,10 +302,7 @@
   .pixelAnimando {
     width: $pixel-size;
     height: $pixel-size;
-    animation: animation 1s infinite;
-    -webkit-animation: animation 1s infinite;
-    -moz-animation: animation 1s infinite;
-    -o-animation: animation 1s infinite;
+    animation: animation 1s forwards;
   }
 }
 
