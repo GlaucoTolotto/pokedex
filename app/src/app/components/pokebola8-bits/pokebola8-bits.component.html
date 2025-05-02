@@ -1,3 +1,9 @@
-<div class="pokebola">
-    <div class="pixel"></div>
+<div (click)="triggerAnimation()" class="pokebola">
+  @if(!animate){
+
+  <div class="pixel"></div>
+  }@else{
+
+  <div class="pixelAnimando"></div>
+  }
 </div>
