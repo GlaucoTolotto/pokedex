@@ -19,12 +19,6 @@ export class Pokebola8BitsComponent {
   animate = false;
 
   triggerAnimation() {
-    // Ativa a classe de animação
     this.animate = true;
-
-    // Remove a classe após a animação terminar (ex: 1s)
-    setTimeout(() => {
-      this.animate = false;
-    }, 1000); // tempo igual à duração da animação
   }
 }
