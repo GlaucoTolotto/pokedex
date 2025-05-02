@@ -1,9 +1,10 @@
+@if(pokemon){
 <div (click)="triggerAnimation()" class="pokebola">
+  <p>{{ pokemon.name }}</p>
   @if(!animate){
-
   <div class="pixel"></div>
   }@else{
-
   <div class="pixelAnimando"></div>
   }
 </div>
+}

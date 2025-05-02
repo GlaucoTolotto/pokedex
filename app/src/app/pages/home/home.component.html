@@ -17,7 +17,7 @@
   
   @if(pokemons.value()?.results){ 
     @for(pokemon of pokemons.value()?.results; track pokemon.name){
-      <app-pokebola8-bits></app-pokebola8-bits>
+      <app-pokebola8-bits [pokemon]="pokemon"></app-pokebola8-bits>
     } 
   }
 </div>

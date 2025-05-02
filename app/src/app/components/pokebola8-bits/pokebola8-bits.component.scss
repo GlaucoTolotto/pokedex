@@ -1,19 +1,24 @@
 @import "../../utilities/styles/variables.scss";
-
 .pokebola {
   width: 17rem;
   height: 17rem;
-  margin: 1rem;
+  margin: 3rem;
   transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  	
+  font-family: "VT323";
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+
   &:hover {
-    transform: translateY(-2rem);
+    transform: translateY(-1.5rem);
   }
   .pixel {
     width: $pixel-size;
     height: $pixel-size;
-
-   
-
     box-shadow:
     // row 1
       calc($pixel-size * 1) 0 0 transparent,
