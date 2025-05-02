@@ -19,6 +19,6 @@ export class Pokebola8BitsComponent {
   animate = false;
 
   triggerAnimation() {
-    this.animate = true;
+    this.animate = !this.animate;
   }
 }
