@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../api/api.service';
 import { CommonModule } from '@angular/common';
-import { PokebolaComponent } from '../../components/cards/pokebola.component';
 import { AllPokemon } from '../../models/allPokemons.model';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { Pokebola8BitsComponent } from '../../components/pokebola8-bits/pokebola8-bits.component';
@@ -11,7 +10,7 @@ import { Pokebola8BitsComponent } from '../../components/pokebola8-bits/pokebola
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, PokebolaComponent,Pokebola8BitsComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule,Pokebola8BitsComponent],
   providers: [ApiService],
   changeDetection: ChangeDetectionStrategy.Default,
 })
