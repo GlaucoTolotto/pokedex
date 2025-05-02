@@ -4,10 +4,16 @@
   width: 17rem;
   height: 17rem;
   margin: 1rem;
-
+  transition: 1s ease-in-out;
+  &:hover {
+    transform: translateY(-2rem);
+  }
   .pixel {
     width: $pixel-size;
     height: $pixel-size;
+
+   
+
     box-shadow:
     // row 1
       calc($pixel-size * 1) 0 0 transparent,
@@ -302,7 +308,7 @@
   .pixelAnimando {
     width: $pixel-size;
     height: $pixel-size;
-    animation: animation 1s forwards;
+    animation: animation 2s forwards;
   }
 }
 
