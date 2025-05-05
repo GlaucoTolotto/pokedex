@@ -1,8 +1,8 @@
 @import "../../utilities/styles/variables.scss";
 .pokebola {
-  width: 17rem;
+  width: 25rem;
   height: 17rem;
-  margin: 3rem;
+  margin: 10rem 3rem 3rem 3rem;
   transition: 1s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -307,7 +307,97 @@
       calc($pixel-size * 14) 15rem 0 transparent,
       calc($pixel-size * 15) 15rem 0 transparent,
       calc($pixel-size * 16) 15rem 0 transparent,
-      calc($pixel-size * 17) 15rem 0 transparent;
+      calc($pixel-size * 17) 15rem 0 transparent,
+      // row 20
+      calc($pixel-size * 1) 16rem 0 transparent,
+      calc($pixel-size * 2) 16rem 0 transparent,
+      calc($pixel-size * 3) 16rem 0 transparent,
+      calc($pixel-size * 4) 16rem 0 transparent,
+      calc($pixel-size * 5) 16rem 0 $secundary-black,
+      calc($pixel-size * 6) 16rem 0 $secundary-black,
+      calc($pixel-size * 7) 16rem 0 $secundary-black,
+      calc($pixel-size * 8) 16rem 0 $secundary-black,
+      calc($pixel-size * 9) 16rem 0 $secundary-black,
+      calc($pixel-size * 10) 16rem 0 $secundary-black,
+      calc($pixel-size * 11) 16rem 0 $secundary-black,
+      calc($pixel-size * 12) 16rem 0 $secundary-black,
+      calc($pixel-size * 13) 16rem 0 $secundary-black,
+      calc($pixel-size * 14) 16rem 0 transparent,
+      calc($pixel-size * 15) 16rem 0 transparent,
+      calc($pixel-size * 16) 16rem 0 transparent,
+      calc($pixel-size * 17) 16rem 0 transparent,
+      // row 21
+      calc($pixel-size * 1) 17rem 0 transparent,
+      calc($pixel-size * 2) 17rem 0 transparent,
+      calc($pixel-size * 3) 17rem 0 transparent,
+      calc($pixel-size * 4) 17rem 0 $secundary-black,
+      calc($pixel-size * 5) 17rem 0 $secundary-black,
+      calc($pixel-size * 6) 17rem 0 $secundary-black,
+      calc($pixel-size * 7) 17rem 0 $secundary-black,
+      calc($pixel-size * 8) 17rem 0 $secundary-black,
+      calc($pixel-size * 9) 17rem 0 $secundary-black,
+      calc($pixel-size * 10) 17rem 0 $secundary-black,
+      calc($pixel-size * 11) 17rem 0 $secundary-black,
+      calc($pixel-size * 12) 17rem 0 $secundary-black,
+      calc($pixel-size * 13) 17rem 0 $secundary-black,
+      calc($pixel-size * 14) 17rem 0 $secundary-black,
+      calc($pixel-size * 15) 17rem 0 transparent,
+      calc($pixel-size * 16) 17rem 0 transparent,
+      calc($pixel-size * 17) 17rem 0 transparent,
+      // row 22
+      calc($pixel-size * 1) 18rem 0 transparent,
+      calc($pixel-size * 2) 18rem 0 transparent,
+      calc($pixel-size * 3) 18rem 0 transparent,
+      calc($pixel-size * 4) 18rem 0 $secundary-black,
+      calc($pixel-size * 5) 18rem 0 $secundary-black,
+      calc($pixel-size * 6) 18rem 0 $secundary-black,
+      calc($pixel-size * 7) 18rem 0 $secundary-black,
+      calc($pixel-size * 8) 18rem 0 $secundary-black,
+      calc($pixel-size * 9) 18rem 0 $secundary-black,
+      calc($pixel-size * 10) 18rem 0 $secundary-black,
+      calc($pixel-size * 11) 18rem 0 $secundary-black,
+      calc($pixel-size * 12) 18rem 0 $secundary-black,
+      calc($pixel-size * 13) 18rem 0 $secundary-black,
+      calc($pixel-size * 14) 18rem 0 $secundary-black,
+      calc($pixel-size * 15) 18rem 0 transparent,
+      calc($pixel-size * 16) 18rem 0 transparent,
+      calc($pixel-size * 17) 18rem 0 transparent,
+      // row 23
+      calc($pixel-size * 1) 19rem 0 transparent,
+      calc($pixel-size * 2) 19rem 0 transparent,
+      calc($pixel-size * 3) 19rem 0 transparent,
+      calc($pixel-size * 4) 19rem 0 transparent,
+      calc($pixel-size * 5) 19rem 0 $secundary-black,
+      calc($pixel-size * 6) 19rem 0 $secundary-black,
+      calc($pixel-size * 7) 19rem 0 $secundary-black,
+      calc($pixel-size * 8) 19rem 0 $secundary-black,
+      calc($pixel-size * 9) 19rem 0 $secundary-black,
+      calc($pixel-size * 10) 19rem 0 $secundary-black,
+      calc($pixel-size * 11) 19rem 0 $secundary-black,
+      calc($pixel-size * 12) 19rem 0 $secundary-black,
+      calc($pixel-size * 13) 19rem 0 $secundary-black,
+      calc($pixel-size * 14) 19rem 0 transparent,
+      calc($pixel-size * 15) 19rem 0 transparent,
+      calc($pixel-size * 16) 19rem 0 transparent,
+      calc($pixel-size * 17) 19rem 0 transparent,
+      // row 24
+      calc($pixel-size * 1) 20rem 0 transparent,
+      calc($pixel-size * 2) 20rem 0 transparent,
+      calc($pixel-size * 3) 20rem 0 transparent,
+      calc($pixel-size * 4) 20rem 0 transparent,
+      calc($pixel-size * 5) 20rem 0 transparent,
+      calc($pixel-size * 6) 20rem 0 transparent,
+      calc($pixel-size * 7) 20rem 0 $secundary-black,
+      calc($pixel-size * 8) 20rem 0 $secundary-black,
+      calc($pixel-size * 9) 20rem 0 $secundary-black,
+      calc($pixel-size * 10) 20rem 0 $secundary-black,
+      calc($pixel-size * 11) 20rem 0 $secundary-black,
+      calc($pixel-size * 12) 20rem 0 transparent,
+      calc($pixel-size * 13) 20rem 0 transparent,
+      calc($pixel-size * 14) 20rem 0 transparent,
+      calc($pixel-size * 15) 20rem 0 transparent,
+      calc($pixel-size * 16) 20rem 0 transparent,
+      calc($pixel-size * 17) 20rem 0 transparent;
   }
 
   .pixelAnimando {
