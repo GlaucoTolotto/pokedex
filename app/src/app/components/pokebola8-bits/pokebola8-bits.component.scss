@@ -12,9 +12,9 @@
   text-transform: uppercase;
 
   &:hover {
+    transform: translateY(-1.5rem);
+    transition: 0.5s ease-in-out;
     .pixel {
-      transition: 0.5s ease-in-out;
-      transform: translateY(-1.5rem);
     }
     .pixelSombra {
       display: none;
@@ -186,8 +186,8 @@
       calc($pixel-size * 3) 2rem 0 transparent,
       calc($pixel-size * 4) 2rem 0 $primary-black,
       calc($pixel-size * 5) 2rem 0 $primary-red,
-      calc($pixel-size * 6) 2rem 0 $primary-white,
-      calc($pixel-size * 7) 2rem 0 $primary-white,
+      calc($pixel-size * 6) 2rem 0 $primary-red,
+      calc($pixel-size * 7) 2rem 0 $primary-red,
       calc($pixel-size * 8) 2rem 0 $primary-red,
       calc($pixel-size * 9) 2rem 0 $primary-red,
       calc($pixel-size * 10) 2rem 0 $primary-red,
@@ -203,8 +203,8 @@
       calc($pixel-size * 2) 3rem 0 transparent,
       calc($pixel-size * 3) 3rem 0 $primary-black,
       calc($pixel-size * 4) 3rem 0 $primary-red,
-      calc($pixel-size * 5) 3rem 0 $primary-white,
-      calc($pixel-size * 6) 3rem 0 $primary-white,
+      calc($pixel-size * 5) 3rem 0 $primary-red,
+      calc($pixel-size * 6) 3rem 0 $primary-red,
       calc($pixel-size * 7) 3rem 0 $primary-red,
       calc($pixel-size * 8) 3rem 0 $primary-red,
       calc($pixel-size * 9) 3rem 0 $primary-red,
@@ -221,7 +221,7 @@
       calc($pixel-size * 2) 4rem 0 transparent,
       calc($pixel-size * 3) 4rem 0 $primary-black,
       calc($pixel-size * 4) 4rem 0 $primary-red,
-      calc($pixel-size * 5) 4rem 0 $primary-white,
+      calc($pixel-size * 5) 4rem 0 $primary-red,
       calc($pixel-size * 6) 4rem 0 $primary-red,
       calc($pixel-size * 7) 4rem 0 $primary-red,
       calc($pixel-size * 8) 4rem 0 $primary-red,
