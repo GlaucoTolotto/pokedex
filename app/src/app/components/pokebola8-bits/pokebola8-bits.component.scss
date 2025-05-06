@@ -10,18 +10,23 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-
+  transition: 0.5s ease-in-out;
+  
   &:hover {
     transform: translateY(-1.5rem);
-    transition: 0.5s ease-in-out;
     .pixel {
+      width: $pixel-size;
+      height: $pixel-size;
+      animation: animaFlutuando 1s linear infinite;
+      animation-direction: alternate;
+      
     }
     .pixelSombra {
       display: none;
     }
 
     .pixelSombraHover {
-      transform: translate(1rem, 15rem);
+      transform: translate(1rem, 17rem);
       width: 1rem;
       height: 1rem;
       box-shadow: 
@@ -553,7 +558,7 @@
   .pixelAnimando {
     width: $pixel-size;
     height: $pixel-size;
-    animation: animation 2s forwards;
+    animation: animation 1s forwards;
   }
 }
 
@@ -603,8 +608,8 @@
       calc($pixel-size * 3) 2rem 0 transparent,
       calc($pixel-size * 4) 2rem 0 $primary-black,
       calc($pixel-size * 5) 2rem 0 $primary-red,
-      calc($pixel-size * 6) 2rem 0 $primary-white,
-      calc($pixel-size * 7) 2rem 0 $primary-white,
+      calc($pixel-size * 6) 2rem 0 $primary-red,
+      calc($pixel-size * 7) 2rem 0 $primary-red,
       calc($pixel-size * 8) 2rem 0 $primary-red,
       calc($pixel-size * 9) 2rem 0 $primary-red,
       calc($pixel-size * 10) 2rem 0 $primary-red,
@@ -620,8 +625,8 @@
       calc($pixel-size * 2) 3rem 0 transparent,
       calc($pixel-size * 3) 3rem 0 $primary-black,
       calc($pixel-size * 4) 3rem 0 $primary-red,
-      calc($pixel-size * 5) 3rem 0 $primary-white,
-      calc($pixel-size * 6) 3rem 0 $primary-white,
+      calc($pixel-size * 5) 3rem 0 $primary-red,
+      calc($pixel-size * 6) 3rem 0 $primary-red,
       calc($pixel-size * 7) 3rem 0 $primary-red,
       calc($pixel-size * 8) 3rem 0 $primary-red,
       calc($pixel-size * 9) 3rem 0 $primary-red,
@@ -638,7 +643,7 @@
       calc($pixel-size * 2) 4rem 0 transparent,
       calc($pixel-size * 3) 4rem 0 $primary-black,
       calc($pixel-size * 4) 4rem 0 $primary-red,
-      calc($pixel-size * 5) 4rem 0 $primary-white,
+      calc($pixel-size * 5) 4rem 0 $primary-red,
       calc($pixel-size * 6) 4rem 0 $primary-red,
       calc($pixel-size * 7) 4rem 0 $primary-red,
       calc($pixel-size * 8) 4rem 0 $primary-red,
@@ -895,8 +900,8 @@
       calc($pixel-size * 3) 2rem 0 transparent,
       calc($pixel-size * 4) 2rem 0 $primary-black,
       calc($pixel-size * 5) 2rem 0 $primary-red,
-      calc($pixel-size * 6) 2rem 0 $primary-white,
-      calc($pixel-size * 7) 2rem 0 $primary-white,
+      calc($pixel-size * 6) 2rem 0 $primary-red,
+      calc($pixel-size * 7) 2rem 0 $primary-red,
       calc($pixel-size * 8) 2rem 0 $primary-red,
       calc($pixel-size * 9) 2rem 0 $primary-red,
       calc($pixel-size * 10) 2rem 0 $primary-red,
@@ -912,8 +917,8 @@
       calc($pixel-size * 2) 3rem 0 transparent,
       calc($pixel-size * 3) 3rem 0 $primary-black,
       calc($pixel-size * 4) 3rem 0 $primary-red,
-      calc($pixel-size * 5) 3rem 0 $primary-white,
-      calc($pixel-size * 6) 3rem 0 $primary-white,
+      calc($pixel-size * 5) 3rem 0 $primary-red,
+      calc($pixel-size * 6) 3rem 0 $primary-red,
       calc($pixel-size * 7) 3rem 0 $primary-red,
       calc($pixel-size * 8) 3rem 0 $primary-red,
       calc($pixel-size * 9) 3rem 0 $primary-red,
@@ -930,7 +935,7 @@
       calc($pixel-size * 2) 4rem 0 transparent,
       calc($pixel-size * 3) 4rem 0 $primary-black,
       calc($pixel-size * 4) 4rem 0 $primary-red,
-      calc($pixel-size * 5) 4rem 0 $primary-white,
+      calc($pixel-size * 5) 4rem 0 $primary-red,
       calc($pixel-size * 6) 4rem 0 $primary-red,
       calc($pixel-size * 7) 4rem 0 $primary-red,
       calc($pixel-size * 8) 4rem 0 $primary-red,
@@ -1186,7 +1191,7 @@
       calc($pixel-size * 2) 2rem 0 transparent,
       calc($pixel-size * 3) 2rem 0 transparent,
       calc($pixel-size * 4) 2rem 0 $primary-black,
-      calc($pixel-size * 5) 2rem 0 $primary-white,
+      calc($pixel-size * 5) 2rem 0 $primary-red,
       calc($pixel-size * 6) 2rem 0 $primary-red,
       calc($pixel-size * 7) 2rem 0 $primary-red,
       calc($pixel-size * 8) 2rem 0 $primary-red,
@@ -1433,5 +1438,14 @@
       calc($pixel-size * 15) 15rem 0 transparent,
       calc($pixel-size * 16) 15rem 0 transparent,
       calc($pixel-size * 17) 15rem 0 transparent;
+  }
+
+}
+@keyframes animaFlutuando {
+ from {
+    transform: translateY(-0.4rem);
+  }
+  to{
+    transform: translateY(0.4rem);
   }
 }
