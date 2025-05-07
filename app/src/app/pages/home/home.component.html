@@ -1,23 +1,25 @@
 <header>
   <img src="/pokemon_logo_PNG5.png" />
-  <div><p>Tipos</p></div>
+  <div>
+    <p>Tipos</p>
+  </div>
 </header>
-<form>
-  <input
-    [value]="pokemonSerchWordKey()"
-    (input)="serchPokemonHandler($event)"
-  />
-  <button>Enviar</button>
-</form>
+<div class="boxForm">
+  <form>
+    <input
+      [value]="pokemonSerchWordKey()"
+      (input)="serchPokemonHandler($event)"
+      type="text"
+    />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </form>
+</div>
 
 <div class="box">
   @if(pokemons.isLoading()){
   <p>Carregando...</p>
-  } 
-  
-  @if(pokemons.value()?.results){ 
-    @for(pokemon of pokemons.value()?.results; track pokemon.name){
-      <app-pokebola8-bits [pokemon]="pokemon"></app-pokebola8-bits>
-    } 
-  }
+  } @if(pokemons.value()?.results){ @for(pokemon of pokemons.value()?.results;
+  track pokemon.name){
+  <app-pokebola8-bits [pokemon]="pokemon"></app-pokebola8-bits>
+  } }
 </div>
