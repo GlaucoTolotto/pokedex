@@ -17,7 +17,7 @@
     .pixel {
       width: $pixel-size;
       height: $pixel-size;
-      animation: animaFlutuando 1s linear infinite;
+      animation: animaFlutuando .7s linear infinite;
       animation-direction: alternate;
       
     }
