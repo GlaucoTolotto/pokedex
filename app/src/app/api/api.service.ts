@@ -14,7 +14,7 @@ export class ApiService {
     return this.httpClient.get<AllPokemon>(
       request
         ? `${this.url}/pokemon/${request}`
-        : `${this.url}/pokemon?limit=20`
+        : `${this.url}/pokemon?limit=150`
     );
   }
 
