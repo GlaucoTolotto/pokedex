@@ -1,0 +1,18 @@
+<div class="paginator">
+  <button [disabled]="currentPage === 1" (click)="goToPreviousPage()">
+    Anterior
+  </button>
+  @for(page of pages; track page){
+
+  <span
+    class="page-number"
+    [class.active]="page === currentPage"
+    (click)="changePage(page)"
+  >
+    {{ page }}
+  </span>
+  }
+  <button [disabled]="currentPage === totalPages" (click)="goToNextPage()">
+    Próximo
+  </button>
+</div>

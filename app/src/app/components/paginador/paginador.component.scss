@@ -1,0 +1,29 @@
+.paginator {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .page-number {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .page-number.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
