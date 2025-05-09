@@ -8,17 +8,19 @@
     <i class="fa-solid fa-magnifying-glass"></i>
   </form>
 </header>
-<div class="box">
-  @if(pokemons.isLoading()){
-  <p>Carregando...</p>
-  } @if(itensDaPaginaAtual){ @for(pokemon of itensDaPaginaAtual; track
-  pokemon.name){
-  <app-pokebola8-bits [pokemon]="pokemon"></app-pokebola8-bits>
-  }
-  <app-paginator
-    [totalItems]="pokemons.value()?.results?.length"
-    [pageSize]="pageSize"
-    (pageChanged)="onPageChanged($event)"
-  ></app-paginator>
-  }
-</div>
+<om-fade direction="right">
+  TESTE
+</om-fade>
+  <div class="container-pokebolas">
+    @if(pokemons.isLoading()){
+    <p>Carregando...</p>
+    } @if(itensDaPaginaAtual){ @for(pokemon of itensDaPaginaAtual; track
+    pokemon.name){
+    <app-pokebola8-bits [pokemon]="pokemon"></app-pokebola8-bits>
+    } }
+  </div>
+<app-paginator
+  [totalItems]="pokemons.value()?.results?.length"
+  [pageSize]="pageSize"
+  (pageChanged)="onPageChanged($event)"
+></app-paginator>

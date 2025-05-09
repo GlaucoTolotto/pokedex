@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   OnInit,
@@ -11,6 +12,7 @@ import { AllPokemon, PokemonsList } from '../../models/allPokemons.model';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { Pokebola8BitsComponent } from '../../components/pokebola8-bits/pokebola8-bits.component';
 import { PaginatorComponent } from '../../components/paginador/paginador.component';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ import { PaginatorComponent } from '../../components/paginador/paginador.compone
     ReactiveFormsModule,
     Pokebola8BitsComponent,
     PaginatorComponent,
+    NgxFadeComponent,
   ],
   providers: [ApiService],
   changeDetection: ChangeDetectionStrategy.Default,
@@ -54,7 +57,8 @@ export class HomeComponent implements OnInit {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
     this.itensDaPaginaAtual = this.pokemons
-      .value()?.results.slice(startIndex, endIndex);
+      .value()
+      ?.results.slice(startIndex, endIndex);
   }
 
   onPageChanged(pageNumber: number): void {
