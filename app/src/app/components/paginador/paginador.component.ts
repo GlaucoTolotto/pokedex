@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { PokemonsList } from '../../models/allPokemons.model';
 
 @Component({
@@ -22,7 +30,7 @@ export class PaginatorComponent implements OnChanges {
   }
 
   updatePagination(): void {
-    if(!this.totalItems)return
+    if (!this.totalItems) return;
     this.totalPages = Math.ceil(this.totalItems / this.pageSize);
     this.updatePageList();
   }
